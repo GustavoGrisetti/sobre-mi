@@ -35,7 +35,7 @@ article {
 
 hr {
     /*modifica el color y grosor de las lineas divisoras*/
-    width: 25%;
+    width: 35%;
     float: left;
     border: 1px solid black;
 }
@@ -50,9 +50,19 @@ li {
     font-size: large;
 }
 
+a {
+    /*modifica el color de los enlaces*/
+    color: purple;
+}
+
 .imagen {
     /*permite modificar la presentación de la imagen, como su posición en la pantalla*/
     width: 16%;
     float: right;
 }
 
+.video {
+    /*permite modificar la presentación del video, como su posición en la pantalla*/
+    width: 20%;
+    float: right;
+}

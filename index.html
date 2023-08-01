@@ -31,7 +31,8 @@
             </article>
  
             <div class="imagen">
-                <!--coloco la imagen dentro de un elemento div con un nombre de clase para manejarlo más fácilmente desde styles.css-->
+                <!--la imagen debe tener un atributo src que explicite dónde esta guardada y un atributo alt que muestre un mensaje si no se carga correctamente-->
+                <!--el atributo style permite controlar su formato para distintas presentaciones en dispositivos diferentes-->
                 <img src="Imagenes/fotoPerfil.jpg" alt="Foto de Perfil" style="width:277px;height:336px;">
             </div>
 
@@ -57,18 +58,30 @@
                 <br>Logré el título intermedio de Bachiller en Ciencias de la Salud en 2021.
                 <br>Actualmente cursando el último año de la carrera.
                 <br>Estudiando programación por cuenta propia desde hace 3 años.</p>
+                 <!--agrego una linea divisora para facilitar la lectura-->
+                 <hr>
             </article>
-            
-<!--            <div class="imagen">
+
+            <div class="video">
+                <!--el video debe tener un atributo src que explicite dónde esta guardada y un atributo type que explicite su formato-->
+                <!--el atributo controls permite que el navegador muestre la interfáz para controlar la reproducción del video-->
                 <video controls>
                     <source src="Videos/Mascotas.mp4" type="video/mp4"
                 </video>
-            </div>
--->
+            </div>           
+
+            <article>
+                <h2>Datos de Contacto</h2>
+                <ul>
+                <!--cada elemento de una lista sin orden se presentan con una viñeta-->
+                    <li><strong>Telefono:</strong> 351-7014955</li>
+                    <!--los elementos <a> permite crear enlaces hacia la dirección escrita en el atributo href="", entre ambas etiquetas va el texto visible para el usuario-->
+                    <li><strong>Mail Personal:</strong> <a href="mailto:gustavofedericogrisetti@gmail.com">gustavofedericogrisetti@gmail.com</a> </li>
+                    <li><strong>Mail Universitario:</strong> <a href="mailto:gustavo.grisetti@mi.unc.edu.ar">gustavo.grisetti@mi.unc.edu.ar</a> </li>
+                </ul>
+            </article>
+
         </main>
 
-        <footer>
-            <!-- Agrega pie de página -->
-        </footer>
     </body>
 </html>
