@@ -28,14 +28,14 @@ h2 {
 article {
     /*permite modificar los article como bloques*/
  /*   background-color: white;  */   
-    width: 45%;
+    width: 70%;
     display: inline-block;
     border-color: black;
   }
 
 hr {
     /*modifica el color y grosor de las lineas divisoras*/
-    width: 50%;
+    width: 25%;
     float: left;
     border: 1px solid black;
 }
