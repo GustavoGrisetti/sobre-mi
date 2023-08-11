@@ -1,23 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <!--los atributos de las etiquetas meta le indican al navegador como procesar la información del sitio-->
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--la etiqueta link en head permite vincular al archivo styles.css que se encarga de darle formato-->
-        <link href="styles.css" rel="stylesheet"/>
-        <!--la etiqueta title no se visualiza en la ágina, pero se lee en la pestaña del navegador y facilita búsquedas indexadas-->
-        <title>Calculadora Simple</title>
-   </head>
-    <body width = "device-width">
-        <header>
-            <!--h1 se usa para el título o encabezado más importante-->
-            <h1>Calculadora Simple</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simple</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        <main>
+<body>
+    <div class="container">
+        <form>
+            <div class="base">
+                <div class="enter">
+                    <h1>Calculadora Simple</h1>
+                </div>
+                <div class="block">
+                    <label for="Número1">Número 1 <input type="number" name="Número1" id="Número1" placeholder="Ej.: 1" required="required"/></label>
+                </div>
+                <div class="block">
+                    <label for="Número2">Número 2 <input type="number" name="Número2" id="Número2" placeholder="Ej.: 1" required="required"/></label>
+                </div>
+                <div class="block">
+                    <label for="operacion">Seleccione una operación aritmética: <select name="operacion" id="operacion">
+                        <option value="">seleccione una operación</option>
+                        <option value="suma">Suma</option>
+                        <option value="resta">Resta</option>
+                        <option value="multiplicacion">Multiplicación</option>
+                        <option value="division">División</option>
+                    </select></label>
+                </div>
+            </div>
+            <div class="base">
+                <div class="enter">
+                    <input type="button" name="submit" value="Calcular" onclick="operaciones()" />
+                </div>
+            </div>
+            <div id="resultado"></div>
+        </form>
+    </div>
+    <script src="operaciones.js"></script>
+</body>
 
-        </main>
-
-    </body>
 </html>

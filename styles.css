@@ -1,68 +1,23 @@
 body {
-    /*modifica los estilos de todo el cuerpo del sitio, excepto en etiquetas esplicitadas más abajo*/
-    /*cambia el color del fondo, el uso de RGB(x,x,x) permite variar el color*/
-    background-color: rgb(168, 168, 168);
-    /*cambia la fuente usada en todo el cuerpo*/
-    font-family: helvetica;
-    /*configura los márgenes y cuanto espacio debe dejar en cada uno*/
-    margin: auto;
-    padding: 2%;
+    background: #f5f6f7;
+    color: #1b1b32;
+    font-family: Helvetica;
+    margin: 0;
+  }
+  
+  header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
   }
 
-h1 {
-    /*modifica la presentación del encabezado principal, en este caso, permite centrarlo*/
-/*    background-color: white;*/   
+  h1 {
+    color: #f5f6f7;
+    font-size: min(5vw, 1.2em);
     text-align: center;
-    /*hace agrega un color y aumenta el grosor del borde del elemento para hacerlo visible*/
-    border: 2px solid black;
-    /*reduce el espacio entre el encabezado y el resto del contenido*/
-    margin-bottom: 5px;
   }
-
-h2 {
-    /*reduce el espacio entre el encabezado y el resto del contenido*/
-    margin-top: 5px;
-    margin-bottom: 8px;
-}
-
-article {
-    /*permite modificar los article como bloques*/
- /*   background-color: white;  */   
-    width: 70%;
-    display: inline-block;
-    border-color: black;
-  }
-
-hr {
-    /*modifica el color y grosor de las lineas divisoras*/
-    width: 35%;
-    float: left;
-    border: 1px solid black;
-}
-
-p {
-    /*le agrega un márgen izquierdo al texto en experiencias*/
-    margin-left: 11px;
-}
-
-li {
-    /*modifica los elementos de las listas, como aumentar su tamaño de fuente*/
-    font-size: large;
-}
-
-a {
-    /*modifica el color de los enlaces*/
-    color: purple;
-}
-
-.imagen {
-    /*permite modificar la presentación de la imagen, como su posición en la pantalla*/
-    width: 16%;
-    float: right;
-}
-
-.video {
-    /*permite modificar la presentación del video, como su posición en la pantalla*/
-    width: 20%;
-    float: right;
-}
