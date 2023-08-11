@@ -15,6 +15,9 @@ body {
     position: fixed;
     top: 0;
   }
+  main {
+    padding: 60px;
+  }
 
   h1 {
     color: #f5f6f7;
