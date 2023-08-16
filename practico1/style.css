@@ -23,12 +23,18 @@ body {
     display: block;
     float: none;
 }
+.botones {
+    width: 100%;
+    margin: 0 10%;
+    display: flex;
+    float: none;
+    gap: 10px;
+}
 .block {
     padding: 20px 20px;
     margin: auto;
     text-align: center;
 }
-
 .base h1 {
     font-size: 26px;
     text-align: center;

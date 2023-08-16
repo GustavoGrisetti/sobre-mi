@@ -15,10 +15,10 @@
                     <h1>Calculadora Simple</h1>
                 </div>
                 <div class="block">
-                    <label for="Número1">Número 1 <input type="number" name="Número1" id="Número1" placeholder="Ej.: 1" required="required"/></label>
+                    <label for="número1">Número 1 <input type="number" name="número1" id="número1" placeholder="Ej.: 1" required="required"/></label>
                 </div>
                 <div class="block">
-                    <label for="Número2">Número 2 <input type="number" name="Número2" id="Número2" placeholder="Ej.: 1" required="required"/></label>
+                    <label for="número2">Número 2 <input type="number" name="número2" id="número2" placeholder="Ej.: 1" required="required"/></label>
                 </div>
                 <div class="block">
                     <label for="operacion">Seleccione una operación aritmética: <select name="operacion" id="operacion">
@@ -30,7 +30,11 @@
                     </select></label>
                 </div>
             </div>
-            <div class="base">
+            <div class="botones">
+                <div class="enter">
+                    <input type="button" name="submit" value="Limpiar" onclick="limpiar()" />
+                </div>
+
                 <div class="enter">
                     <input type="button" name="submit" value="Calcular" onclick="operaciones()" />
                 </div>
