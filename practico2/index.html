@@ -12,17 +12,39 @@
     </header>
     <main>
         <div class="area-juego">
-            <div class="titulo"><h2>Piedra, papel o tijera</h2>
+            <div class="titulo">
+                <h2>Piedra, papel o tijera</h2>
             </div>
-            <div class="nombre"><p>Ingrese su nombre aqui + boton para confirmar</p>
+            <div class="nombre">
+                <label for="nombre">Para iniciar, ingrese su nombre: 
+                    <input type="text" name="nombre" id="nombre" required="required">
+                    <input type="button" name="ingresar" value="Ingresar" onclick="nombre()" />
+                </label>
             </div>
-            <div class="botones"><p>Aqui van los botones con las 3 opciones</p>
+            <div id="saludo">
             </div>
-            <div class="contadores"><p>Aqui iran los contadores de victorias</p>
+            <div class="botones">
+                <img src="imagenes/piedraNegro.png" alt="piedra" onclick="piedraPapelTijera(jugadas[0])">
+                <img src="imagenes/papelNegro.png" alt="papel" onclick="piedraPapelTijera(jugadas[1])">
+                <img src="imagenes/tijeraNegro.png" alt="tijera" onclick="piedraPapelTijera(jugadas[2])">
             </div>
-            <div class="resultado"><p>Aqui ira el resultado de cada ronda</p>
+            <div id="jugada">
             </div>
-            <div class="reinicio"><p>Aqui ira un boton para reiniciar el juego</p></div>
+            <div class="jugar">
+                <input type="button" name="jugar" value="Jugar" onclick="jugar()" />
+            </div>
+            <div class="resultados">
+                <div id="jugador"></div>
+                <div id="computadora"></div>
+                <div id="resultado"></div>
+            </div>
+            <div class="contadores">
+                <div id="victoriasJugador"></div>
+                <div id="Empates"></div>
+                <div id="victoriasComputadora"></div>
+            </div>
+            <div class="final">
+            </div>
         </div>
     </main>
     <script src="piedraPapelTijera.js"></script>

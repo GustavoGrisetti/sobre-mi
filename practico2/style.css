@@ -5,7 +5,6 @@
 body{
   font-family: Helvetica, Arial, sans-serif;
   background: #f5f6f7;
-  color: #1b1b32;
   font-size: 16px;
   line-height: 1.5;
   padding: 0;
@@ -24,11 +23,11 @@ header{
 main{
   margin-top: 48px;
 }
-h1{
-  color: #f5f6f7;
-  font-size: min(5vw, 1.2em);
+
+div{
+  width: 100%;
   text-align: center;
-  margin: auto;
+  color: #043d72;
 }
 .area-juego{
   width: 540px;
@@ -36,4 +35,79 @@ h1{
   margin: 100px auto;
   background-color: #f7baba;
   border-radius: 10px;
+}
+h1{
+  color: #f5f6f7;
+  font-size: min(5vw, 1.2em);
+  text-align: center;
+  margin: auto;
+}
+.titulo{
+  background-color: #1b1b32;
+}
+h2{
+  color: #f5f6f7;
+  font-size: min(5vw, 1.2em);
+  text-align: center;
+  margin: auto;
+}
+label{
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 5%;
+  color: #1b1b32;
+  display: flex;
+  align-items: center;
+}
+input[type="text"] {
+  margin: 0 5px;
+  border: 2px solid #1073d0;
+  background-color: #f7f7f7;
+  border-radius: 2px;
+  color: #1073d0;
+}
+input[type="text"]:focus {
+  background-color: #ffffff;
+  border: 2px solid orange;
+  outline: none;
+}
+input[type="button"] {
+  border: none;
+  border-radius: 6px;
+  background-color: #0761b6;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+}
+input[type="button"]:hover {
+  background-color: #003669;
+}
+div[class="jugar"] {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  float: none;
+}
+input[name="jugar"] {
+  width: 140px;
+  margin: 0 auto;
+  outline: none;
+  min-height: 50px;
+  border: 2px solid #1073d0;
+  padding: 0 auto;
+  background-color: #0761b6;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 17px;
+}
+/*.saludo{
+  text-align: center;
+  margin: auto;
+}*/
+.botones {
+  width: 90%;
+  margin: 2% 5%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
