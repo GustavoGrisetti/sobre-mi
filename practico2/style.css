@@ -1,5 +1,5 @@
 *{
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   box-sizing: border-box;
   }
 body{
@@ -44,6 +44,7 @@ h1{
 }
 .titulo{
   background-color: #1b1b32;
+  border-radius: 10px 10px 0 0;
 }
 h2{
   color: #f5f6f7;
@@ -54,10 +55,12 @@ h2{
 label{
   width: 100%;
   margin: 0 auto;
+  margin-top: 1%;
   padding-left: 5%;
-  color: #1b1b32;
   display: flex;
   align-items: center;
+  color: #043d72;
+  font-weight: bold;
 }
 input[type="text"] {
   margin: 0 5px;
@@ -82,15 +85,23 @@ input[type="button"] {
 input[type="button"]:hover {
   background-color: #003669;
 }
+img:hover {
+  margin:0;
+  padding:0;
+  border-radius: 22px;
+  border: 2px solid orange;
+}
 div[class="jugar"] {
   width: 100%;
   margin: 0 auto;
+  margin-top: 1%;
   display: flex;
   float: none;
 }
 input[name="jugar"] {
   width: 140px;
   margin: 0 auto;
+  margin-bottom: 2%;
   outline: none;
   min-height: 50px;
   border: 2px solid #1073d0;
@@ -100,13 +111,21 @@ input[name="jugar"] {
   color: #ffffff;
   font-size: 17px;
 }
+div[id="resultado"] {
+  font-weight: bold;
+}
+div[class="contadores"] {
+  margin-top: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
 /*.saludo{
   text-align: center;
   margin: auto;
 }*/
 .botones {
-  width: 90%;
-  margin: 2% 5%;
+  width: 100%;
+  margin: 2% 6%;
   display: flex;
   align-items: center;
   gap: 8px;

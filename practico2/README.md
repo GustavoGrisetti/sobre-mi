@@ -20,15 +20,21 @@ _Los contadores llevarán la cuenta de las victorias y empates_
 
 _Una vez un contador de victorias llegue a 3, la partida acaba, se define el ganador y permite volver a empezar el juego_
 
+_Al presionar "Reiniciar", todos los valores vuelven a sus estados originales (excepto el nombre que se mantiene)_
+
 ### Datos de Desarrollo 🛠️
 
 _El index.html fue hecho desde cero_
 
 _El style.css esta basado en gran parte en el estilo usado en el práctico 1 (calculadora simple)_
 
+_Íconos obtenidos desde https://www.freeimages.com/es/premium-clipart/rock-paper-scissors-black-and-white-royalty-free-vector-icon-s-6710503_
+    *Modificados mediante Paint 11.2302.19.0 y Adobe Photoshop 24.7
+
 _El archivo piedraPapelTijera.js esta basado en gran parte en las funciones usadas en el práctico 4 de la primera etapa de AP4.0 (Piedra, Papel o Tijeras en JS)_
-*Se adaptaron funciones para obtener datos desde el index.html
-*Se eliminó la opción del ingreso manual de la jugada del usuario (ahora usa las imágenes)
+    *Se adaptaron funciones para obtener datos desde el index.html (se eliminaron todas las líneas que usaban "readline-sync" y "console.log()").
+    *Se eliminó el ingreso por texto de la jugada del usuario (ahora usa las imágenes).
+    *Se reutilizaron los contadores, las funciones obtenerJugadaComputadora() y determinarGanador () casi en su totalidad.
 
 ## Pruebas Técnicas ⚙️
 
@@ -42,6 +48,15 @@ _Al presionar el botón "Jugar" con la jugada elegida, el sistema avisa mediante
 
 _Al presionar el botón "Jugar" con la jugada elegida, el sistema avisa mediante 3 líneas de texto, ambas jugadas y el resultado de la ronda_ (Correcto)
 
+_Los 3 contadores al final llevan el marcador de victorias y empates_ (Correcto)
+
+_El ganador se define al llegar a 3 victorias_ (Correcto)
+
+_Los empates no cuentan para definir el ganador, son sólo estadísiticos_ (Por especificación del docente)
+
+_Al llegar a 3 victorias, el sistema emite un mensaje de texto anunciando el ganador_ (Correcto)
+
+_Al llegar a 3 victorias, el botón "Jugar" cambia a "Reiniciar" para poder volver a empezar desde cero_ (Correcto)
 
 ## Autor ✒️
 

@@ -18,10 +18,10 @@ function nombre(){
     //Si el nombre es válido, da un mensaje de bienvenida para iniciar el juego.
     } else {
         nombreUsuario = document.getElementById("nombre").value;
-        document.getElementById("saludo").innerHTML = "Bienvenido "+nombreUsuario+", seleccione una de las siguientes tres jugadas:";
+        document.getElementById("saludo").innerHTML = "Bienvenido "+nombreUsuario+", selecciona una de las siguientes tres jugadas:";
     }
 }
-//Tres funciones que determinan la jugada elegida por el usuario.
+//Función que determina la jugada elegida por el usuario.
 function piedraPapelTijera(jugada){
     if (nombreUsuario=="" || nombreUsuario==undefined){
         window.alert("Error: ingrese un nombre");
@@ -29,14 +29,23 @@ function piedraPapelTijera(jugada){
         switch(jugada){
             case "piedra":
                 jugadaUsuario = "piedra"
+                document.getElementById("piedra").setAttribute("src", "imagenes/piedraGris.png");
+                document.getElementById("papel").setAttribute("src", "imagenes/papelNegro.png");
+                document.getElementById("tijera").setAttribute("src", "imagenes/tijeraNegro.png");
                 document.getElementById("jugada").innerHTML = "Eligió PIEDRA. Para continuar, presione el botón 'Jugar'.";
                 break;
             case "papel":
                 jugadaUsuario = "papel"
+                document.getElementById("papel").setAttribute("src", "imagenes/papelGris.png");
+                document.getElementById("piedra").setAttribute("src", "imagenes/piedraNegro.png");
+                document.getElementById("tijera").setAttribute("src", "imagenes/tijeraNegro.png");
                 document.getElementById("jugada").innerHTML = "Eligió PAPEL. Para continuar, presione el botón 'Jugar'.";
                 break;
             case "tijera":
                 jugadaUsuario = "tijera"
+                document.getElementById("tijera").setAttribute("src", "imagenes/tijeraGris.png");
+                document.getElementById("papel").setAttribute("src", "imagenes/papelNegro.png");
+                document.getElementById("piedra").setAttribute("src", "imagenes/piedraNegro.png");
                 document.getElementById("jugada").innerHTML = "Eligió TIJERA. Para continuar, presione el botón 'Jugar'.";
                 break;
             default:
@@ -59,20 +68,54 @@ function determinarGanador (jugada1, jugada2) {
             return resultado = "Gana la computadora";
     } else if ((jugada1 == jugadas[0] && jugada2 == jugadas[2]) || (jugada1 == jugadas[1] && jugada2 == jugadas[0]) || (jugada1 == jugadas[2] && jugada2 == jugadas[1])) { 
             contadorJugador++                                                                                       
-            return resultado = "Gana el usuario";
+            return resultado = "Gana "+nombreUsuario;
     }
 }
+//Función que llama a las otras y verifica si hay algún ganador en el marcador global.
 function jugar() {
     if (nombreUsuario=="" || nombreUsuario==undefined){
         window.alert("Error: ingrese un nombre");
-    } else if (jugadaUsuario==undefined) {
+    } else if (jugadaUsuario==undefined || jugadaUsuario=="") {
         window.alert("Error: elija una jugada primero");
     } else {
         obtenerJugadaComputadora ();
         determinarGanador (jugadaUsuario, jugadaComputadora);
-        document.getElementById("jugador").innerHTML = "La computadora eligio: "+jugadaComputadora+".";
-        document.getElementById("computadora").innerHTML = "El usuario eligio: "+jugadaUsuario+".";
-        document.getElementById("resultado").innerHTML = "El resultado fue: "+resultado+".";
-        
+        document.getElementById("jugador").innerHTML = "La computadora eligió: "+jugadaComputadora+".";
+        document.getElementById("computadora").innerHTML = nombreUsuario+" eligió: "+jugadaUsuario+".";
+        document.getElementById("resultado").innerHTML = "Resultado: "+resultado+".";
+        document.getElementById("victoriasJugador").innerHTML = "Victorias Jugador: "+contadorJugador;
+        document.getElementById("Empates").innerHTML = "Empates: "+contadorEmpates;
+        document.getElementById("victoriasComputadora").innerHTML = "Victorias CPU: "+contadorComputadora;
+        if (contadorJugador>=3){
+            document.getElementById("saludo").innerHTML = "¡"+nombreUsuario+" ha ganado en el marcador global!<br>¡Felicidades! Presiona 'Reiniciar' si quieres volver a jugar.";
+            document.getElementById("jugar").setAttribute("value", "Reiniciar");
+            document.getElementById("jugar").setAttribute("onclick", "reiniciar()");
+        } else if (contadorComputadora>=3) {
+            document.getElementById("saludo").innerHTML = "La computadora ha ganado en el marcador global.<br>Presiona 'Reiniciar' si quieres volver a jugar.";
+            document.getElementById("jugar").setAttribute("value", "Reiniciar");
+            document.getElementById("jugar").setAttribute("onclick", "reiniciar()");
+        } else {
+            document.getElementById("saludo").innerHTML = "Siguiente ronda. Elije una nueva jugada:";
+        }
     }
+}
+//Función que reemplaza a jugar() cuando ya se ha definido un ganador. Reinicia la partida.
+function reiniciar(){
+    contadorJugador = 0;
+    contadorComputadora = 0;
+    contadorEmpates = 0;
+    jugadaUsuario = "";
+    document.getElementById("jugador").innerHTML = "";
+    document.getElementById("computadora").innerHTML = "";
+    document.getElementById("resultado").innerHTML = "";
+    document.getElementById("victoriasJugador").innerHTML = "";
+    document.getElementById("Empates").innerHTML = "";
+    document.getElementById("victoriasComputadora").innerHTML = "";
+    document.getElementById("jugada").innerHTML = "";
+    document.getElementById("saludo").innerHTML = "Bienvenido "+nombreUsuario+", selecciona una de las siguientes tres jugadas:";
+    document.getElementById("tijera").setAttribute("src", "imagenes/tijeraNegro.png");
+    document.getElementById("papel").setAttribute("src", "imagenes/papelNegro.png");
+    document.getElementById("piedra").setAttribute("src", "imagenes/piedraNegro.png");
+    document.getElementById("jugar").setAttribute("value", "Jugar");
+    document.getElementById("jugar").setAttribute("onclick", "jugar()");
 }

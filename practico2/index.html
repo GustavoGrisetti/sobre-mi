@@ -24,14 +24,14 @@
             <div id="saludo">
             </div>
             <div class="botones">
-                <img src="imagenes/piedraNegro.png" alt="piedra" onclick="piedraPapelTijera(jugadas[0])">
-                <img src="imagenes/papelNegro.png" alt="papel" onclick="piedraPapelTijera(jugadas[1])">
-                <img src="imagenes/tijeraNegro.png" alt="tijera" onclick="piedraPapelTijera(jugadas[2])">
+                <img src="imagenes/piedraNegro.png" alt="piedra" id="piedra" onclick="piedraPapelTijera(jugadas[0])">
+                <img src="imagenes/papelNegro.png" alt="papel" id="papel" onclick="piedraPapelTijera(jugadas[1])">
+                <img src="imagenes/tijeraNegro.png" alt="tijera" id="tijera" onclick="piedraPapelTijera(jugadas[2])">
             </div>
             <div id="jugada">
             </div>
             <div class="jugar">
-                <input type="button" name="jugar" value="Jugar" onclick="jugar()" />
+                <input type="button" name="jugar" id="jugar" value="Jugar" onclick="jugar()" />
             </div>
             <div class="resultados">
                 <div id="jugador"></div>
